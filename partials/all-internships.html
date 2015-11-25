@@ -1,0 +1,40 @@
+<div>
+    <div class="col-xs-6">
+        <button class="btn btn-default" ui-sref="all-internships.subview1">
+            Subview 1
+        </button>
+        <button class="btn btn-default" ui-sref="all-internships.subview2">
+            Subview 2
+        </button>
+    </div>
+    <div class="col-xs-6">
+        <!-- ui-sref is an angular link to a state (links to "new-internship" state in navigation.js)  -->
+        <button class="btn btn-primary pull-right" ui-sref="new-internship">
+            Create New Internship
+        </button>
+    </div>
+    <div class="col-xs-12">
+        Here you will see all the internships... in a little while...
+    </div>
+
+    <!-- to edit a internship
+    <!-- ng-click will call editInternship method in allInternshipController  -->
+    <div ng-repeat="visit in internshipVisits | limitTo: limitInternships" ng-click="editInternship(visit)">
+        <div class="col-xs-6 well">
+            <label>Initials: </label> {{visit.initials}}
+            <label>Date: </label> {{visit.date}}
+            <label>Student name: </label> {{visit.studentName}}
+            <label>Student id: </label> {{visit.studentId}}
+            <label>People: </label> {{visit.people}}
+            <label>Company: </label> {{visit.company}}
+        </div>
+    </div>
+
+</div>
+
+<div>
+
+
+    <div ui-view></div>
+
+</div>

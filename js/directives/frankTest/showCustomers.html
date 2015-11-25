@@ -1,0 +1,15 @@
+<div>
+    <div>
+        <label>{{data2[0].firstName}}</label>
+        <span><input type="text" value="{{data2[0].salary}}"/></span>
+    </div>
+
+    <div>
+        <ul>
+            <li ng-repeat="item in data2">
+                <label>{{item.firstName}}</label>
+                <span><input type="text" value="{{item.salary}}"/></span>
+            </li>
+        </ul>
+    </div>
+</div>
